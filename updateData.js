@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-// Updates publishedAt
+// Updates aditional entries data, eg: publishedAt
 const req = async () => {
   const x = await axios({
     method: 'GET',

@@ -1,6 +1,7 @@
 const axios = require('axios');
 const blog = require('./blog.json');
 
+// List of entries objects
 const newsAll = blog.rss.channel.item.map(news => ({
   data: {
     titulo: news.title,
@@ -10,6 +11,7 @@ const newsAll = blog.rss.channel.item.map(news => ({
   }
 }));
 
+// POST entries to Strapi
 const req = async () => {
   Promise.all(
     newsAll.map(
